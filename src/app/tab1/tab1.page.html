@@ -1,17 +1,16 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="success">
+    <ion-title color="dark">Posts List</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- List of Text Items -->
+  <ion-list>
+    <ion-item *ngFor="let post of postsData">
+      <ion-label color="primary">
+        Title {{post.id}} : {{post.title}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
